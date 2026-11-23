@@ -1,0 +1,16 @@
+{
+  "name": "chaoxing-auto-next",
+  "version": "1.5.7",
+  "private": true,
+  "license": "MIT",
+  "description": "学习通电脑网页端自动切换下一节的本地浏览器扩展",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "test:browser": "node tests/browser.cjs",
+    "test:questions": "node tests/questions-browser.cjs",
+    "test:quiz-state": "node tests/quiz-state-browser.cjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  }
+}

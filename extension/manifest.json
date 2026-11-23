@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "学习通 · 自动下一节",
+  "version": "1.5.7",
+  "description": "自动播放视频和滚动课件。等待学习通确认任务点后切换，可略过章节答题和空白页。",
+  "permissions": ["storage", "webNavigation"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["https://*.chaoxing.com/*", "http://*.chaoxing.com/*"],
+    "js": ["core.js", "documents.js", "speed.js", "quiz.js", "playback.js", "content.js"],
+    "all_frames": true,
+    "match_about_blank": true,
+    "run_at": "document_idle"
+  }]
+}
